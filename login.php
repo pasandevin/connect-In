@@ -12,22 +12,30 @@ include ("db_connection.php");
 <body>
 	<h1>Log In</h1>
 		<?php
-	/*checking if a button is pressed*/
+	/*checking if the form is submitted*/
 	if( isset ( $_REQUEST['loginsubmit'] ) ){
 		
 		$username = $_REQUEST['uname'];
 		$password = $_REQUEST['pwd'];
-			$sql="SELECT username,pw from users where username='".$username."' AND pw='".$password."'";
+		$sql="SELECT uid,fname,username,pw from users where username='".$username."' AND pw='".$password."'";
 
 		$result	= $link->query($sql);
-		if ($result->num_rows>0){
+		if ($result->num_rows == 1){
 		while ( $row = $result->fetch_array()){
 		
-				$uname=$row["username"];
-				$pw=$row["pw"];	
-			echo $uname;
-			echo $pw;
+				$uname = $row["username"];
+				$userid = $row["uid"];
+				$fname = $row["fname"];
 				
+		
+    /*starting a session*/
+	session_start();
+			$_SESSION['user_name']=$uname;
+			$_SESSION['first_name']=$fname;
+			$_SESSION['user_id']=$userid;
+			header('Location:homepage.php');
+			
+	 
 			
 				}
 		} else{
