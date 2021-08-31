@@ -7,14 +7,16 @@
 
 <body>
 	<?php
+	/*checking if a button is pressed*/
 	if( isset ( $_REQUEST['Reg_Log'] ) ){
 	
 	$value = $_REQUEST['Reg_Log']; 
-	
+	/*redirecting to register page*/
 	if ($value == 'Reg'){
 		header('Location:register.php');
 		
-	}
+	}    
+		/*redirecting to login page*/
 		elseif($value == 'Log'){
 			header('Location:login.php');
 			
@@ -33,8 +35,6 @@ Get Started
 	<button name="Reg_Log" type="submit" value="Log">Log-In</button>
 
 </form>
-
-
 
 </form>
 	
