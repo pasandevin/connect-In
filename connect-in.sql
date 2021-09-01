@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 01, 2021 at 01:33 PM
+-- Generation Time: Sep 01, 2021 at 03:49 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS `connections` (
 --
 
 INSERT INTO `connections` (`username1`, `username2`) VALUES
+('ads', 'meenak'),
+('ajith', 'manraj'),
 ('bkamal', 'heshanm'),
 ('bkamal', 'manraj'),
 ('bkamal', 'meenak'),
@@ -48,6 +50,19 @@ INSERT INTO `connections` (`username1`, `username2`) VALUES
 ('bkamal', 'shehanwalp'),
 ('bkamal', 'weere1'),
 ('bkamal', 'wins'),
+('heshanm', 'piyath3'),
+('kavi', 'shehanwalp'),
+('kavini', 'bkamal'),
+('kavini', 'heshanm'),
+('kavini', 'manraj'),
+('kavini', 'meenak'),
+('kavini', 'piyath3'),
+('kavini', 'sayurig'),
+('kavini', 'shehanwalp'),
+('kavini', 'weere1'),
+('kavini', 'wins'),
+('lasa1', 'heshanm'),
+('lassa', 'shehanwalp'),
 ('meenak', 'piyath3'),
 ('ridmaj', 'bkamal'),
 ('ridmaj', 'manraj'),
@@ -94,7 +109,12 @@ INSERT INTO `users` (`email`, `fname`, `lname`, `username`, `bday`, `pw`) VALUES
 ('piyathgurusinghe@ms.com', 'Piyath', 'Gurusinghe', 'piyath3', '1993-03-15', 'P1yath)315'),
 ('manraj@icloud.com', 'Manny', 'Rajapaksha', 'manraj', '1988-08-22', 'M88Raj!22'),
 ('sayurigunathilaka@gmail.com', 'Sayuri', 'Gunathilaka', 'sayurig', '1997-06-02', '$aYu970622'),
-('meenak@gmail.com', 'Meena', 'Kariyawasam', 'meenak', '1996-07-02', 'Meena@96-07');
+('meenak@gmail.com', 'Meena', 'Kariyawasam', 'meenak', '1996-07-02', 'Meena@96-07'),
+('kavinigunarathna@gmail.com', 'Kavini', 'Gunarathna', 'kavini', '1993-12-12', 'fsdfe'),
+('kavinisenarath@gmail.com', 'Senarath', 'Gunarathna', 'Kavi', '1993-11-30', 'dfefvv '),
+('ajithmare@gmail.com', 'Ajith', 'Marasinghe', 'ajith', '1989-02-22', 'sdfffwevv'),
+('lasanthawick@gmail.com', 'Lasantha', 'Wickramasinghe', 'lasa1', '1982-02-25', 'dflksopf'),
+('lakshanmaduranga@gmail.com', 'Lakshan', 'Maduranga', 'lassa', '1996-02-25', 'dflkjope');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

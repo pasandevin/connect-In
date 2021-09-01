@@ -23,7 +23,7 @@ include ("db_connection.php");
 	$first_name=$_SESSION['first_name'] = $first_name;
 	/*end - getting session variables*/
 
-	header('Location:homepage.php');
+	header('Location:add_connections.php');
 }
 
 ?>

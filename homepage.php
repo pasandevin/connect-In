@@ -26,7 +26,7 @@ if ( isset($_REQUEST['page']) ) {
 } else {
 	$pageno=1;
 }
-$recPerPage=3;
+$recPerPage=5;
 $end = $pageno * $recPerPage;
 if ( $pageno == 1 ) {
 	$start	= 0;
