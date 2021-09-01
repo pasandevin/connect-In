@@ -45,7 +45,17 @@ $totalPages =	ceil ($totalrec / $recPerPage);
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Homepage</title>
+<style>
+	body{
+		text-align: center;
+	}
+	a{
+		background: rgba(0,0,0,0.1);
+		padding: 7px 10px;
+		border-radius: 5px;
+	}
+</style>
 </head>
 
 <body>
@@ -74,7 +84,7 @@ $totalPages =	ceil ($totalrec / $recPerPage);
 ?>
 	<h1>Hello <?php echo $first_name; ?>, Welcome to connect in</h1>
 	<p>You have <?php echo $totalrec; ?> connections </p>
-	<table width="50%" border="2" cellpadding="3">
+	<table width="50%" border="2" cellpadding="3" align="center">
   <tbody>
     <tr>
       <td>First Name</td>
@@ -110,14 +120,14 @@ $totalPages =	ceil ($totalrec / $recPerPage);
 		}
 		/*end - retrieving and displaying connection details*/
 ?>
-	<td>
+	<td colspan="3">
 		<form action="add_connections.php" method="POST">
 			<input type="submit" align="left" name="new_conn" value="Add new Connections">
 		</form>
 	</td>	  
   </tbody>
 	</table>
-	
+	<br>
 	
 <?php
 	} else {

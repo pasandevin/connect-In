@@ -31,47 +31,54 @@ include ("db_connection.php");
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Register</title>
+<style>
+	form{
+		border: solid 2px black;
+		border-radius: 5px;
+		width: 25rem;
+		text-align: center;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	input[type="text"], input[type="email"], input[type="password"]{
+		display: block;
+		margin: 0.3rem 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 15rem;
+		padding: 0.5rem;
+		font-size: 1.1rem;
+	}
+	input[type="submit"]{
+		font-size: 1.15rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding: 0.5rem 2rem;
+		cursor: pointer;
+	}
+</style>
 </head>
 
 <body>
-	<h1>Register new User</h1>
 	<form method="post" action="<?php $_SERVER['PHP_SELF'];?>">
-		<table width="50%" border="1" cellpadding="4">
-  <tbody>
-    <tr>
-      <td>Email</td>
-      <td><input type="email" name="email"></td>
-    </tr>
-    <tr>
-      <td>User Name</td>
-      <td><input type="text" name="username" ></td>
-    </tr>
-	<tr>
-      <td>First Name</td>
-      <td><input type="text" name="firstname" ></td>
-    </tr>
-	<tr>
-      <td>Last Name</td>
-      <td><input type="text" name="lastname" ></td>
-    </tr>
-	<tr>
-      <td>BirthDay</td>
-      <td><input type="text" name="birthday" ></td>
-    </tr>
-	 <tr>
-      <td>Password</td>
-      <td><input type="password" name="password"></td>
-	 
-    </tr>
-	<tr>
-      <td><input type="submit" name="reg_submit"></td>
+	<h1>Register new User</h1>
 
-	 
-    </tr>
+      <input type="email" name="email" placeholder="Email">
 
-  </tbody>
-</table>
+      <input type="text" name="username" placeholder="Username">
+
+      <input type="text" name="firstname" placeholder="First name">
+
+      <input type="text" name="lastname" placeholder="Last name">
+
+      <input type="text" name="birthday" placeholder="Birthday">
+
+      <input type="password" name="password" placeholder="Password">
+	 
+      <input type="submit" name="reg_submit" value="Register">
 
 	</form>
 </body>

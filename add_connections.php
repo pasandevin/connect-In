@@ -26,12 +26,17 @@ if ( isset($_REQUEST["add_con"]) ) {
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Add friends</title>
+<style>
+	body{
+		text-align: center;
+	}
+</style>
 </head>
 
 <body>
 		<h1>Hello <?php echo $first_name; ?>, Welcome to connect in</h1>
-	<table width="50%" border="2" cellpadding="3">
+	<table width="50%" border="2" cellpadding="3" align="center">
   <tbody>
     <tr>
       <td>First Name</td>
@@ -100,7 +105,7 @@ while( $row = $result_non_conn -> fetch_array() ) {
 		}
 		/*end -  displaying non-connection details*/
 ?>
-	  	<td>
+	  	<td colspan="3">
 		<form action="homepage.php" method="POST">
 			<input type="submit" align="left" name="new_conn" value="Back to Connections">
 		</form>
