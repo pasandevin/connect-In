@@ -11,7 +11,6 @@ $first_name=$_SESSION['first_name'];
 /*end - getting session variables*/
 
 /*removing a connection*/
-/*retrieving session variables*/
 if ( isset($_REQUEST["rem_con"]) ) {
 	$my_user_name = $_REQUEST['uname'];
 	$user_name_to_remove = $_REQUEST['dname'];
@@ -73,8 +72,9 @@ $totalPages =	ceil ($totalrec / $recPerPage);
 		
 	
 ?>
-	<p>Hello <?php echo $user_name; ?>, Welcome to connect in</p>
-	<table width="50%" border="2">
+	<h1>Hello <?php echo $first_name; ?>, Welcome to connect in</h1>
+	<p>You have <?php echo $totalrec; ?> connections </p>
+	<table width="50%" border="2" cellpadding="3">
   <tbody>
     <tr>
       <td>First Name</td>
@@ -91,7 +91,7 @@ $totalPages =	ceil ($totalrec / $recPerPage);
 			$sql_ret_names	= "SELECT username,fname FROM users WHERE username='".$connection_uname."'";
 			$result_names= $link->query($sql_ret_names);
 			while( $row = $result_names -> fetch_array() ) {
-				?>
+?>
 				 <tr>
 				 <td><?php echo $row['fname']; ?></td>
 				 <td><?php echo $row['username']; ?></td>

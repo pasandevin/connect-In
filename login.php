@@ -24,7 +24,6 @@ include ("db_connection.php");
 		while ( $row = $result->fetch_array()){
 		
 				$uname = $row["username"];
-				$userid = $row["uid"];
 				$fname = $row["fname"];
 				
 		
@@ -32,7 +31,6 @@ include ("db_connection.php");
 	session_start();
 			$_SESSION['user_name']=$uname;
 			$_SESSION['first_name']=$fname;
-			$_SESSION['user_id']=$userid;
 			header('Location:homepage.php');
 			
 	 
