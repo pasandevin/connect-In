@@ -17,7 +17,7 @@ include ("db_connection.php");
 		
 		$username = $_REQUEST['uname'];
 		$password = $_REQUEST['pwd'];
-		$sql="SELECT uid,fname,username,pw from users where username='".$username."' AND pw='".$password."'";
+		$sql="SELECT fname,username,pw from users where username='".$username."' AND pw='".$password."'";
 
 		$result	= $link->query($sql);
 		if ($result->num_rows == 1){
